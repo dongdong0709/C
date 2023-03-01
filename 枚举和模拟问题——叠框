@@ -1,10 +1,11 @@
 #include<stdio.h>
+#include<stdbool.h>
 int arr[1000][1000];
 int main(){
     int n;// n是外框的长度
     char inner,outter;//内和外的花色
     bool flag=true;//flag用来判断是否是第一个结果
-    while(scanf("%d %c %c",&n,&inner,&outter)!=EOF){//输入一个个三元组
+    while(scanf("%d %c %c\n",&n,&inner,&outter)!=EOF){//输入一个个三元组
         //处理空行的显示
         if(flag==true){
             flag=false;
@@ -57,3 +58,4 @@ int main(){
         }
     }
 }
+
