@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+    int arr[2][13]={{0,31,28,31,30,31,30,31,31,30,31,30,31},
+                    {0,31,29,31,30,31,30,31,31,30,31,30,31}};
+    int year;
+    int month;
+    int day;
+    int n=0;
+    scanf("%d %d %d",&year,&month,&day);
+    if(year%400==0||year%100!=0&&year%4==0){//闰年
+        for(int i=0;i<month;i++){
+            n+=arr[0][i];
+        }
+        n+=day;
+        printf("%d\n",n);
+    }
+    else{
+        for(int i=0;i<month;i++){
+            n+=arr[1][i];
+        }
+        n+=day;
+        printf("%d\n",n);
+    }
+}
