@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdbool.h>
+bool isLeapYear(int year){
+    return year%400==0||year%100!=0&&year%4==0;
+}
+int main(){
+    int year,n;
+    while(scanf("%d%d",&year,&n)!=EOF){
+        int arr[2][13]={{0,31,28,31,30,31,30,31,31,30,31,30,31},
+                        {0,31,29,31,30,31,30,31,31,30,31,30,31}};
+        int row= isLeapYear(year);
+        int month=0;
+        int day;
+        while(n>arr[row][month]){
+            n=n-arr[row][month];
+            month++;    //确定月份
+        }
+        day=n;//确定日期
+        printf("%d %d %d\n",year,month,day);
+    }
+}
