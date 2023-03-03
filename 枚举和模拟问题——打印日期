@@ -16,6 +16,6 @@ int main(){
             month++;    //确定月份
         }
         day=n;//确定日期
-        printf("%d %d %d\n",year,month,day);
+        printf("%4d-%02d-%2d\n",year,month,day);
     }
 }
